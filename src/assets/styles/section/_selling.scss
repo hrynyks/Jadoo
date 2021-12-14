@@ -1,0 +1,74 @@
+.selling {
+    padding-bottom: 150px;
+
+    &__title {
+        &-sml {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        position: relative;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 314px;
+        width: 100%;
+        background-color: #fff;
+        filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+        border-radius: 24px;
+
+        &-content {
+            padding: 27px 23px 42px;
+        }
+
+        &-wrap {
+            font-size: toRem(18);
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        &-time {
+            font-weight: 500;
+            display: block;
+            padding-left: 32px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(/src/assets/images/selling-navigation-icon.png);
+                width: 17px;
+                height: 17px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-bg {
+            position: absolute;
+            right: -62px;
+            bottom: 47px;
+            z-index: -1;
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+    }
+}

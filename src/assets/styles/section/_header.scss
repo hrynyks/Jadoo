@@ -1,0 +1,75 @@
+.header {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    z-index: 1;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        @include a (tablet) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        &-link {
+            font-family: 'Open Sans', sans-serif;
+            font-size: toRem(17);
+            color: #212832;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-color: #212832;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+    }
+
+    &__btn {
+        font-family: 'Open Sans', sans-serif;
+        font-size: toRem(17);
+        font-weight: 500;
+        color: #212832;
+
+        &-right {
+            padding: 9px 21px;
+            border: 1px solid #212832;
+            border-radius: 5px;
+        }
+
+        &-lang {
+            padding-right: 18px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(/src/assets/images/header-arrow.png);
+                width: 10px;
+                height: 5px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

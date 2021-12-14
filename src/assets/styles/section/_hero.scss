@@ -1,0 +1,149 @@
+.hero {
+    padding: 105px 0;
+    position: relative;
+
+    @include a (laptop) {
+        padding-top: 150px;
+    }
+
+    @include a (tablet-xl) {
+        padding-top: 200px;
+    }
+
+    @include a (tablet) {
+        padding-top: 250px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        max-width: 545px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        &-sml {
+            font-size: toRem(20);
+            font-weight: 700;
+            color: #DF6951;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        font-family: 'Volkhov', serif;
+        font-size: toRem(84);
+        line-height: 89px;
+        letter-spacing: -0.04em;
+        color: #181E4B;
+        position: relative;
+        margin-bottom: 30px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+
+        &-decore {
+            position: absolute;
+            right: -83px;
+            top: 70px;
+            z-index: -1;
+
+            @include a (tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__descr {
+        line-height: 30px;
+        font-weight: 500;
+        color: $main-color;
+        max-width: 477px;
+        width: 100%;
+        margin-bottom: 34px;
+
+        @include a (tablet-xl) {
+            max-width: 350px;
+            text-align: center;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__btn {
+        &-left {
+            font-family: 'Open Sans', sans-serif;
+            font-size: toRem(18);
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            width: 170px;
+            line-height: 60px;
+            background-color: #F1A501;
+            box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+            border-radius: 10px
+        }
+
+        &-right {
+            font-size: toRem(17);
+            font-weight: 500;
+            color: $main-color;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 21px;
+        }
+
+        &-span {
+            display: block;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #DF6951;
+            box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+            background-image: url(/src/assets/images/hero-arrow.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__image {
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+}
